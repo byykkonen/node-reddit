@@ -4,7 +4,7 @@ const rp = require("request-promise");
 
 const dataPath = path.join(__dirname, "popular-articles.json");
 
-rp("https://reddit.com/r/popular.json", (err, res, body) => {
+rp("https://reddit.com/r/programmingHumor.json", (err, res, body) => {
   if (err) console.log(err);
   let articles = [];
   JSON.parse(body).data.children.forEach(item => {
